@@ -23,6 +23,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="lab8-cli",
         description="Tiny calculator and greeting CLI.",
+        epilog=(
+            "examples: lab8-cli add 2 3 | lab8-cli sub 10 4 "
+            "| lab8-cli greet MTP"
+        ),
     )
     commands = parser.add_subparsers(dest="command", required=True)
 
